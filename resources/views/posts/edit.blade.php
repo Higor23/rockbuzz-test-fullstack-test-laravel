@@ -20,6 +20,15 @@
                             </span>
                             @endif
                         </div>
+                        <div class="form-group has-feedback{{ $errors->has('slug') ? ' has-error' : '' }}">
+                            <label for="title" class="text-muted">Slug</label>
+                            <input id="title" type="text" name="slug"  value="{{ $post->title }}"  class="form-control" placeholder="Ex.: cuscuz-com-coco">
+                            @if ($errors->has('slug'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('slug') }}</strong>
+                            </span>
+                            @endif
+                        </div>
                         <div class="form-group has-feedback{{ $errors->has('body') ? ' has-error' : '' }}">
                             <label for="body" class="text-muted">Body</label>
                             <textarea id="body" name="body" rows="10" class="form-control">{{ $post->body }}</textarea>

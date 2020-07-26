@@ -91,13 +91,13 @@
 
             <div class='row'>
                 @foreach($postsOn as $post)
-                <a href="{{ url('posts/edit/' . $post->id) }}">
+                <a href="{{ url('posts/edit/' . $post->slug) }}">
                     <a class="link-detail" href="{{ url('/posts/postDetail/' . $post->slug) }}">
                         <div class="col">
 
                             <div class="card" id="card" style="width: 20rem;">
                                 <h4 class="card-text">{{ $post->title }}</h4>
-                                <a class="" href="{{ url('/posts/postDetail/' . $post->id) }}">
+                                <a class="" href="{{ url('/posts/postDetail/' . $post->slug) }}">
                                     <img src="{{ url("media/{$post->image}") }}" class="card-img-top" alt="Image" />
                                 </a>
                                 <p></p>
